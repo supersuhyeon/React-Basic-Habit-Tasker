@@ -130,7 +130,7 @@ Tested handleIncrement() which makes count + 1 under PureComponent.
 ![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/94214512/192214113-d108b1d4-5ed1-4dd1-93fc-9374142ab4fe.gif)
 
 As you can see, it doesn't render because this.state.habits and this.setState({habits}) points the same ref address object
-even though you can the count value (habits[index].count++)
+even though you changed the count value (habits[index].count++)
 
 ```js
 class App extends PureComponent {
