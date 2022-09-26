@@ -1,8 +1,8 @@
-import React, { Component, useRef } from 'react';
+import React, { PureComponent, useRef } from 'react';
 import Habit from './habit';
 import HabitAddForm from './habitAddForm';
 
-class Habits extends Component {
+class Habits extends PureComponent {
 
     handleIncrement = (habit)=>{ //내가 지금 클릭하고있는 그 value배열
         this.props.onIncrement(habit)

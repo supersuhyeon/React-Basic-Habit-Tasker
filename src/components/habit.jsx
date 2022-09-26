@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
 
+    // testRef = React.createRef()
     constructor(props){
         super(props)
         this.testRef = React.createRef()

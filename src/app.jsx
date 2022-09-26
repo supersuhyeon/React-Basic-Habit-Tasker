@@ -13,9 +13,8 @@ class App extends PureComponent {
     ],
 }
 
-handleIncrement = (habit)=>{ //내가 지금 클릭하고있는 그 value배열
-  // habit.count++
-  // this.setState(this.state)
+handleIncrement = (habit)=>{
+
   const habits = this.state.habits.map(item=>{
     if(item.id===habit.id){
       return {...habit, count: habit.count + 1} //새로운 오브젝트가 만들어짐
@@ -28,6 +27,7 @@ handleIncrement = (habit)=>{ //내가 지금 클릭하고있는 그 value배열
   // const index = habits.indexOf(habit)
   // habits[index].count++
   // this.setState({habits:habits}) //state안에있는 habits의 key는 새롭게 만든 껍데기 배열
+// }
 
 handleDecrement = (habit)=>{
   // const habits = [...this.state.habits];
@@ -46,9 +46,6 @@ handleDecrement = (habit)=>{
   }
 
 handleDelete = (habit)=>{
-  // console.log(`handleDelete ${habit.name}`)
-  // const habits = this.state.habits.filter((element)=>{return element.id !== habit.id}) //일치하지않는것들만 따로 모아서 배열형성
-  // const array = habits.splice(index, 1)
   const habits = this.state.habits
   const array = habits.filter((elem)=>{return elem.id !== habit.id})
   this.setState({habits:array})
