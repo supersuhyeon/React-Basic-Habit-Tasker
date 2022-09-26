@@ -6,7 +6,7 @@ class Navbar extends PureComponent {
         console.log('navbar')
         return (
             <nav className='navbar'>
-                <i className='navbar-logo fas fa-leaf'></i>
+                <i className='navbar-logo fa-solid fa-book'></i>
                 <span>Habit Tracker</span>
                 <span className='navbar-count'>{this.props.totalCount}</span>
             </nav>

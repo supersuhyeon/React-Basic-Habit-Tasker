@@ -72,7 +72,7 @@ handleReset = ()=>{
 }
 
   render() {
-    console.log('app')
+    console.log('App')
     return (
       <>
       <Navbar

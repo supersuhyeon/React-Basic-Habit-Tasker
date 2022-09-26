@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { useState } from 'react';
 
-const Simplehabit = (props) => {
+const Simplehabit = () => {
 
     // state = {
     //     count : 0
     // }
   
-    const [count, setCount] = useState(0) //변수 2개/ 초기값세팅/ 실제 state값을 count라는 변수에 넣음. 카운트를 업데이트할 수있는 setCount함수를 리턴
+    const [count, setCount] = useState(0) //변수 두개 지정, useState(초기값), count,setCount를 선언해놓고 useState를 호출하게되면 리액트에서 두개를 리턴해줌. 실제 스테이트 값과, 업데이트 될 함수. useState(0)는 count에 할당
     const spanRef = useRef() //react.creatRef() 반복되는걸 막기위해.
    
     const handleIncrement = useCallback(() => { //onclick의 handleIncrement가 무한정 새로운 오브젝트를 만드는걸 방지. 만일 계속만들면 memo를 쓰더라도 소용없음 왜? 새로운 오브젝트 props로 변경되니까
@@ -15,7 +15,7 @@ const Simplehabit = (props) => {
     })
 
     useEffect(()=>{
-        console.log(`mounted & updated: ${count}`)
+        console.log(`mounted & updated: ${count}`) //mount될때 한번 실행 업데이트될때마다 실행됨
     },[]);
 
     return (      
